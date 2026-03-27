@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  color-scheme: light;
+  --bg: #0f1014;
+  --bg-soft: #171922;
+  --text: #f4f5f7;
+  --muted: #c7cad1;
+  --fire: #ff7a2a;
+  --flood: #4aa6ff;
+  --glass: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background: radial-gradient(circle at 10% 10%, #2b2030 0%, transparent 35%),
+    radial-gradient(circle at 90% 0%, #143a45 0%, transparent 35%),
+    linear-gradient(135deg, #0b0d12 0%, #141724 60%, #0b0d12 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 32px clamp(20px, 4vw, 64px) 56px;
+  gap: 32px;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: "Fraunces", serif;
+  font-size: clamp(24px, 3vw, 34px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.call-button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.call-button svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  fill: none;
+}
+
+.call-button:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.hero {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 36px);
+  align-items: stretch;
+}
+
+.hero-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  min-height: clamp(360px, 55vh, 560px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+  isolation: isolate;
+  animation: rise 0.9s ease forwards;
+}
+
+.site-footer {
+  margin-top: auto;
+  padding: 20px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px 24px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-value {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.footer-value a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-value a:hover {
+  text-decoration: underline;
+}
+
+.footer-sep {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.hero-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 0.7s ease;
+}
+
+.hero-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, rgba(8, 10, 16, 0.75) 10%, rgba(8, 10, 16, 0.2) 65%);
+  z-index: 0;
+}
+
+.hero-card::before {
+  content: "";
+  position: absolute;
+  inset: -20% 40% 60% -20%;
+  opacity: 0.35;
+  filter: blur(40px);
+  z-index: 0;
+}
+
+.hero-card.fire::before {
+  background: radial-gradient(circle, rgba(255, 122, 42, 0.7) 0%, transparent 70%);
+}
+
+.hero-card.flood::before {
+  background: radial-gradient(circle, rgba(74, 166, 255, 0.7) 0%, transparent 70%);
+}
+
+.hero-card:hover img {
+  transform: scale(1.08);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  padding: clamp(24px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 18px;
+  z-index: 1;
+}
+
+.card-overlay h2 {
+  margin: 0;
+  font-size: clamp(26px, 2.8vw, 38px);
+  line-height: 1.1;
+  font-weight: 600;
+  color: var(--text);
+  text-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+}
+
+.cta {
+  align-self: flex-start;
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: var(--glass);
+  color: var(--text);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-card.fire .cta:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 122, 42, 0.2);
+  border-color: rgba(255, 122, 42, 0.5);
+}
+
+.hero-card.flood .cta:hover {
+  transform: translateY(-2px);
+  background: rgba(74, 166, 255, 0.2);
+  border-color: rgba(74, 166, 255, 0.5);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card {
+    min-height: 320px;
+  }
+}

@@ -1,0 +1,62 @@
+<svg viewBox="0 0 1400 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a0f12" />
+      <stop offset="45%" stop-color="#120b14" />
+      <stop offset="100%" stop-color="#09090f" />
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#ffb86b" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#ffb86b" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="smoke" cx="30%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe08a" />
+      <stop offset="55%" stop-color="#ff7a2a" />
+      <stop offset="100%" stop-color="#c22c1a" />
+    </linearGradient>
+    <linearGradient id="ember" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffb86b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ffb86b" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="1000" fill="url(#bg)" />
+  <rect width="1400" height="1000" fill="url(#glow)" />
+  <circle cx="260" cy="180" r="220" fill="url(#smoke)" />
+  <circle cx="620" cy="140" r="260" fill="url(#smoke)" />
+  <circle cx="1040" cy="210" r="220" fill="url(#smoke)" />
+
+  <g opacity="0.95">
+    <rect x="160" y="360" width="1080" height="470" rx="36" fill="#14131a" />
+    <polygon points="130,370 700,140 1270,370" fill="#101019" />
+    <rect x="610" y="510" width="180" height="280" rx="18" fill="#0d0d13" />
+    <rect x="340" y="470" width="200" height="140" rx="14" fill="#0d0d13" />
+    <rect x="860" y="470" width="200" height="140" rx="14" fill="#0d0d13" />
+    <rect x="320" y="650" width="760" height="18" rx="9" fill="#1e1a1f" opacity="0.6" />
+  </g>
+
+  <g opacity="0.7">
+    <rect x="200" y="420" width="980" height="26" rx="13" fill="#2a1b1b" />
+    <rect x="210" y="460" width="960" height="12" rx="6" fill="#2a1b1b" />
+  </g>
+
+  <g>
+    <path d="M520 520c-36 78 38 106 38 168 0 54-62 82-62 82s122 12 166-78c44-92-18-142-46-166 10-42-22-78-22-78-8 44-46 50-74 72z" fill="url(#flame)" />
+    <path d="M690 490c-34 72 44 104 44 162 0 54-64 90-64 90s142 4 176-86c34-86-14-134-44-156 8-40-20-70-20-70-10 38-48 46-92 60z" fill="url(#flame)" />
+    <path d="M850 540c-28 56 30 88 30 136 0 44-50 76-50 76s114 4 146-74c32-74-12-116-40-134 8-34-16-52-16-52-12 30-34 36-70 48z" fill="url(#flame)" />
+  </g>
+
+  <g opacity="0.8">
+    <circle cx="420" cy="420" r="6" fill="#ffcf8a" />
+    <circle cx="470" cy="380" r="4" fill="#ffcf8a" />
+    <circle cx="560" cy="410" r="5" fill="#ffcf8a" />
+    <circle cx="780" cy="380" r="6" fill="#ffcf8a" />
+    <circle cx="900" cy="420" r="4" fill="#ffcf8a" />
+    <circle cx="1020" cy="390" r="5" fill="#ffcf8a" />
+    <ellipse cx="980" cy="520" rx="90" ry="40" fill="url(#ember)" />
+  </g>
+</svg>

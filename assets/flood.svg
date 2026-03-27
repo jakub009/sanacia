@@ -1,0 +1,54 @@
+<svg viewBox="0 0 1400 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1a2b" />
+      <stop offset="55%" stop-color="#0b1524" />
+      <stop offset="100%" stop-color="#080c16" />
+    </linearGradient>
+    <radialGradient id="mist" cx="70%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5fb8ff" stop-opacity="0.85" />
+      <stop offset="45%" stop-color="#2a7bd6" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#1f5aa8" stop-opacity="0.85" />
+    </linearGradient>
+    <linearGradient id="reflection" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d8f0ff" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#d8f0ff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="1000" fill="url(#bg)" />
+  <circle cx="320" cy="160" r="240" fill="url(#mist)" />
+  <circle cx="980" cy="180" r="260" fill="url(#mist)" />
+
+  <g opacity="0.95">
+    <rect x="160" y="340" width="1080" height="520" rx="36" fill="#0e1522" />
+    <polygon points="130,350 700,120 1270,350" fill="#0b1220" />
+    <rect x="610" y="520" width="180" height="280" rx="18" fill="#0a111c" />
+    <rect x="330" y="480" width="200" height="140" rx="14" fill="#0a111c" />
+    <rect x="870" y="480" width="200" height="140" rx="14" fill="#0a111c" />
+  </g>
+
+  <g opacity="0.65">
+    <rect x="260" y="620" width="180" height="90" rx="10" fill="#111f31" />
+    <rect x="980" y="630" width="120" height="80" rx="10" fill="#111f31" />
+    <rect x="470" y="660" width="160" height="60" rx="10" fill="#111f31" />
+  </g>
+
+  <g>
+    <path d="M120 650c120-22 240-22 360 0 120 22 240 22 360 0 120-22 240-22 360 0v230H120z" fill="url(#water)" />
+    <path d="M120 690c120-18 240-18 360 0 120 18 240 18 360 0 120-18 240-18 360 0" fill="none" stroke="#9ad2ff" stroke-opacity="0.45" stroke-width="10" />
+    <path d="M120 740c120-14 240-14 360 0 120 14 240 14 360 0 120-14 240-14 360 0" fill="none" stroke="#c8e7ff" stroke-opacity="0.3" stroke-width="8" />
+    <path d="M220 650h960v150H220z" fill="url(#reflection)" />
+  </g>
+
+  <g opacity="0.5">
+    <path d="M620 330c12 40 40 64 80 76" stroke="#b3e5ff" stroke-opacity="0.3" stroke-width="6" />
+    <path d="M720 340c10 36 32 54 66 66" stroke="#b3e5ff" stroke-opacity="0.25" stroke-width="5" />
+    <circle cx="1040" cy="350" r="14" fill="#b3e5ff" opacity="0.2" />
+    <circle cx="300" cy="360" r="12" fill="#b3e5ff" opacity="0.2" />
+  </g>
+</svg>
