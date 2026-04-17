@@ -4,15 +4,15 @@ import { createRoot } from "react-dom/client";
 const cards = [
   {
     title: "Služby po požiari",
-    href: "https://sanacia.eu/poziar",
-    image: "./src/public/fireman-fire-fighting-evacuation-fire-drill-simulation-training-safety-condominium-factory.jpg",
+    href: "https://sadze.sk/poziar.html",
+    image: "/fireman-fire-fighting-evacuation-fire-drill-simulation-training-safety-condominium-factory.jpg",
     alt: "Požiar alebo sadza v obytnom dome",
     accent: "fire",
   },
   {
     title: "Služby po vytopení",
-    href: "https://sanacia.eu/vytopenie",
-    image: "./src/public/natural-disaster.jpg",
+    href: "https://sadze.sk/vytopenie.html",
+    image: "/natural-disaster.jpg",
     alt: "Vytopený dom zvnútra",
     accent: "flood",
   },
@@ -42,10 +42,6 @@ function App() {
     if (event.target === event.currentTarget) {
       closeModal();
     }
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
   };
 
   return e(
@@ -192,6 +188,7 @@ function App() {
         e(
           "div",
           { className: "footer-value footer-contact" },
+          e("div", { className: "footer-contact-name" }, e("strong", null, "Mário Domček")),
           e(
             "div",
             { className: "footer-contact-item" },
@@ -292,7 +289,11 @@ function App() {
             ),
             e(
               "form",
-              { className: "contact-form", onSubmit: handleSubmit },
+              {
+                className: "contact-form",
+                action: "https://formspree.io/f/mojpwplb",
+                method: "POST",
+              },
               e(
                 "div",
                 { className: "form-grid" },
